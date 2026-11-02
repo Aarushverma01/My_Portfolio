@@ -129,14 +129,14 @@ In accordance with strict content rules, facts and links not present in your res
 
 ### Option 1: GitHub Pages (Free, 2 minutes)
 
-1. Create a new GitHub repository on your account (`Aarushverma01`), named `portfolio` (or `Aarushverma01.github.io`).
+1. Create a new public GitHub repository on your account (`Aarushverma01`), named **`My_Portfolio`**.
 2. Push your code:
    ```bash
    git init
    git add .
    git commit -m "Initial portfolio release"
    git branch -M main
-   git remote add origin https://github.com/Aarushverma01/<your-repo-name>.git
+   git remote add origin https://github.com/Aarushverma01/My_Portfolio.git
    git push -u origin main
    ```
 3. Go to your repository on GitHub.
