@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aarush Verma | Machine Learning Engineer & Data Analyst</title>
+  <meta name="description" content="Personal portfolio of Aarush Verma, a Machine Learning Engineer and Data Analyst specializing in AI, LLM post-training workflows, and data pipelines.">
+  <meta name="keywords" content="Aarush Verma, Machine Learning Engineer, Data Analyst, AI, LLM Post-Training, Python, Data Science, Portfolio">
+  <meta name="author" content="Aarush Verma">
+
+  <!-- Open Graph / Social Sharing Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aarush Verma | Machine Learning Engineer & Data Analyst">
+  <meta property="og:description" content="Portfolio of Aarush Verma — B.Tech AI & ML undergraduate specializing in machine learning, LLM post-training workflows, and analytical problem-solving.">
+  <meta property="og:image" content="assets/profile.jpg">
+  <meta property="og:url" content="https://aarushverma01.github.io">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aarush Verma | Machine Learning Engineer & Data Analyst">
+  <meta name="twitter:description" content="Portfolio of Aarush Verma — Machine Learning Engineer & Data Analyst.">
+  <meta name="twitter:image" content="assets/profile.jpg">
+
+  <!-- Google Fonts: Space Grotesk (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Theme initialization to prevent flash of wrong theme -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Keyboard accessibility skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Sticky Minimal Navigation Bar -->
+  <header class="site-header" id="top">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Aarush Verma - Home">
+        <span class="brand-monogram">AV</span>
+        <span class="brand-name">Aarush Verma</span>
+      </a>
+
+      <!-- Desktop & Tablet Navigation Links -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Theme Switcher, GitHub Profile & Mobile Menu Button -->
+      <div class="nav-actions">
+        <a href="https://github.com/Aarushverma01" class="icon-nav-btn" target="_blank" rel="noopener noreferrer" aria-label="Visit Aarush's GitHub Profile" title="GitHub: Aarushverma01">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark mode" title="Toggle theme">
+          <svg class="theme-icon sun-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon moon-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button id="mobile-toggle" class="mobile-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==================== 1. HERO SECTION ==================== -->
+    <section class="section hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <!-- PROFILE PICTURE AREA -->
+        <!-- 
+          TO UPDATE YOUR PHOTO:
+          1. Save your personal headshot as "profile.jpg"
+          2. Drop it directly into the "assets/" folder, replacing "assets/profile.jpg"
+          3. The circular frame and object-fit styling will format any photo cleanly.
+        -->
+        <div class="hero-image-wrapper reveal">
+          <div class="avatar-frame">
+            <img 
+              src="assets/profile.jpg" 
+              alt="Portrait of Aarush Verma, Machine Learning Engineer & Data Analyst" 
+              class="hero-avatar"
+              width="240"
+              height="240"
+              loading="eager"
+            >
+          </div>
+          <div class="status-badge" aria-label="Current status">
+            <span class="status-indicator"></span>
+            <span class="status-text">Available for Opportunities</span>
+          </div>
+        </div>
+
+        <!-- HERO TEXT CONTENT -->
+        <div class="hero-content reveal">
+          <span class="hero-eyebrow">Hello, I'm</span>
+          <h1 class="hero-name">Aarush Verma</h1>
+          <p class="hero-title">Machine Learning Engineer &amp; Data Analyst</p>
+          <p class="hero-statement">
+            Passionate about building intelligent systems and robust data pipelines, with hands-on experience in LLM post-training workflows and analytical problem solving.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              View projects
+              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+            <!-- 
+              TO UPDATE YOUR RESUME PDF:
+              Drop your updated resume into assets/ named "resume.pdf".
+            -->
+            <a href="assets/resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" download="Aarush_Verma_Resume.pdf">
+              Download resume
+              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 2. ABOUT SECTION ==================== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">01 / Profile</span>
+          <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Short Confident Bio -->
+          <div class="about-narrative reveal">
+            <p class="about-lead">
+              I am a B.Tech student specializing in Artificial Intelligence and Machine Learning at Noida International University.
+            </p>
+            <p class="about-body">
+              My hands-on experience spans LLM post-training workflows, live ML problem solving, and end-to-end data analytics pipelines. I take pride in turning ambiguous data into dependable insights and building clean, modular software with strong object-oriented principles.
+            </p>
+            <p class="about-body">
+              Driven by rapid learning and disciplined daily coding, I am focused on engineering intelligent, real-world systems that deliver measurable impact.
+            </p>
+          </div>
+
+          <!-- 3 Quick Facts strictly from Resume -->
+          <div class="about-facts-card reveal">
+            <h3 class="facts-title">Quick Facts</h3>
+            <ul class="facts-list">
+              <li class="fact-item">
+                <span class="fact-label">Education</span>
+                <span class="fact-value">B.Tech – CS (AI &amp; ML)</span>
+              </li>
+              <li class="fact-item">
+                <span class="fact-label">Graduation Year</span>
+                <span class="fact-value">2027 (2023 – 2027)</span>
+              </li>
+              <li class="fact-item">
+                <span class="fact-label">Location</span>
+                <span class="fact-value">Greater Noida, UP, India</span>
+              </li>
+              <li class="fact-item">
+                <span class="fact-label">Academic Merit</span>
+                <span class="fact-value">CGPA: 7.85 / 10</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. SELECTED PROJECTS ==================== -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">02 / Portfolio</span>
+          <h2 class="section-title">Selected Projects</h2>
+          <p class="section-subtitle">Real-world systems, AI implementations, and software engineering projects.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Voice Assistant using Python (From Resume) -->
+          <article class="project-card reveal">
+            <div class="project-card-header">
+              <div class="project-type-tag">Personal Project · Python &amp; NLP</div>
+              <h3 class="project-title">Voice Assistant using Python</h3>
+            </div>
+            <p class="project-outcome">
+              Built a real-time hands-free voice assistant delivering human-computer interaction through speech recognition, NLP command parsing, and text-to-speech output.
+            </p>
+            <ul class="project-highlights">
+              <li>Engineered an NLP execution pipeline supporting automated web queries, custom application launching, music playback, and system time/date queries.</li>
+              <li>Architected modular command-handling logic using Python Object-Oriented Programming (OOP) for scalable extensibility.</li>
+            </ul>
+            <div class="project-tech-stack" aria-label="Technologies used">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Speech Recognition</span>
+              <span class="tech-tag">pyttsx3</span>
+              <span class="tech-tag">NLP Basics</span>
+              <span class="tech-tag">OOP</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Aarushverma01/voice-assistant" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+              <!-- Note: Live Demo button omitted per rule: hide button when there is no link -->
+            </div>
+          </article>
+
+          <!-- 
+            TODO (OPTIONAL): Additional Projects Placeholder
+            Your resume lists one primary personal project. To add more projects as you build them,
+            uncomment this template block or copy it to add your next project card!
+          -->
+          <article class="project-card project-card-placeholder reveal">
+            <div class="project-card-header">
+              <div class="project-type-tag">Upcoming / Additional Project</div>
+              <h3 class="project-title">ML Pipeline &amp; Analytics Dashboard</h3>
+            </div>
+            <p class="project-outcome">
+              [TODO: Add your second project summary here — e.g. Customer churn prediction or an interactive Power BI / Python exploratory data dashboard.]
+            </p>
+            <ul class="project-highlights">
+              <li>[TODO: Bullet 1 — quantified outcome or dataset used]</li>
+              <li>[TODO: Bullet 2 — machine learning model architecture or pipeline]</li>
+            </ul>
+            <div class="project-tech-stack" aria-label="Technologies used">
+              <span class="tech-tag">Scikit-learn</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">Docker</span>
+            </div>
+            <div class="project-links">
+              <!-- 
+                TODO: Replace TODO_GITHUB_URL with your repo when ready
+              -->
+              <span class="project-status-note">Repository link coming soon</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. EXPERIENCE SECTION ==================== -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">03 / History</span>
+          <h2 class="section-title">Experience &amp; Milestones</h2>
+          <p class="section-subtitle">Internships, industry exposure, technical competitions, and certifications.</p>
+        </div>
+
+        <div class="timeline">
+
+          <!-- Experience 1: InAmigos Foundation -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-date">Jul 2026 – Aug 2026</span>
+                <span class="timeline-badge badge-work">Internship</span>
+              </div>
+              <h3 class="timeline-role">Data Analytic Intern</h3>
+              <h4 class="timeline-company">InAmigos Foundation</h4>
+              <ul class="timeline-details">
+                <li>Collected, organized, and systematically maintained high-volume datasets from heterogeneous resources to support organizational reporting.</li>
+                <li>Applied analytical thinking to solve data-related operational requirements and streamline downstream project deliverables.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience 2: Shripat Tech-Innovation Corporation -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-date">May 2026 – Jul 2026</span>
+                <span class="timeline-badge badge-work">Internship</span>
+              </div>
+              <h3 class="timeline-role">Technical Intern</h3>
+              <h4 class="timeline-company">Shripat Tech-Innovation Corporation</h4>
+              <ul class="timeline-details">
+                <li>Applied foundational machine learning algorithms and rigorous data-driven problem solving to live production projects.</li>
+                <li>Contributed to network planning and implementation initiatives, demonstrating rapid technical onboarding and consistent coding practices.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience 3: Ethara AI -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-date">Apr 2026 – May 2026</span>
+                <span class="timeline-badge badge-work">Internship</span>
+              </div>
+              <h3 class="timeline-role">LLM Post-Training Intern</h3>
+              <h4 class="timeline-company">Ethara AI</h4>
+              <ul class="timeline-details">
+                <li>Executed data curation, preparation, and quality evaluation workflows directly supporting Large Language Model (LLM) post-training pipelines.</li>
+                <li>Collaborated on AI and data initiatives, strengthening practical fluency with real-world machine learning data pipelines and model evaluation benchmarks.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience 4: IEEE Tech Debate Winner -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-date">2026</span>
+                <span class="timeline-badge badge-award">Award</span>
+              </div>
+              <h3 class="timeline-role">Winner, IEEE Tech Debate</h3>
+              <h4 class="timeline-company">NIU IEEE Council</h4>
+              <ul class="timeline-details">
+                <li>Earned first place in a university-wide technical debate evaluating frontier computing, artificial intelligence paradigms, and engineering trade-offs.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience 5: Model United Nations Winner -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-date">2026</span>
+                <span class="timeline-badge badge-award">Award</span>
+              </div>
+              <h3 class="timeline-role">Winner, Model United Nations (MUN)</h3>
+              <h4 class="timeline-company">NIU (SLA)</h4>
+              <ul class="timeline-details">
+                <li>Secured victory through structured debate, policy formulation, multilateral negotiation, and logical resolution of complex international problems.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience 6: Samsung Innovation Campus -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-date">2025</span>
+                <span class="timeline-badge badge-cert">Certification</span>
+              </div>
+              <h3 class="timeline-role">Samsung Innovation Campus</h3>
+              <h4 class="timeline-company">Samsung</h4>
+              <ul class="timeline-details">
+                <li>Completed intensive training covering core Artificial Intelligence concepts, machine learning algorithms, and practical technical problem solving.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. SKILLS & TOOLS SECTION ==================== -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">04 / Capabilities</span>
+          <h2 class="section-title">Skills &amp; Tools</h2>
+          <p class="section-subtitle">Technical stack, frameworks, and tools verified through hands-on practice.</p>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Category 1: Languages -->
+          <div class="skill-category-card reveal">
+            <h3 class="skill-category-title">
+              <span class="skill-category-num">01</span>
+              Languages
+            </h3>
+            <div class="tags-container">
+              <span class="skill-tag skill-tag-primary">Python (Primary)</span>
+              <span class="skill-tag">Java (OOP, DSA)</span>
+              <span class="skill-tag">C</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Data & ML -->
+          <div class="skill-category-card reveal">
+            <h3 class="skill-category-title">
+              <span class="skill-category-num">02</span>
+              Data &amp; Machine Learning
+            </h3>
+            <div class="tags-container">
+              <span class="skill-tag">Scikit-learn</span>
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">Matplotlib</span>
+              <span class="skill-tag">Seaborn</span>
+              <span class="skill-tag">ML Fundamentals</span>
+              <span class="skill-tag">NLP Basics</span>
+              <span class="skill-tag">LLM Post-Training Workflows</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Web (Prompt requires Web category - Resume does not list web tech, so placeholder is provided) -->
+          <div class="skill-category-card reveal">
+            <h3 class="skill-category-title">
+              <span class="skill-category-num">03</span>
+              Web
+            </h3>
+            <div class="tags-container">
+              <!-- 
+                TODO: Add any web frameworks you work with (e.g. FastAPI, Flask, HTML5/CSS3).
+                Currently marked with a placeholder to uphold resume truthfulness.
+              -->
+              <span class="skill-tag skill-tag-placeholder" title="Add web technologies in index.html">[TODO: Web Frameworks - e.g. FastAPI, Flask, HTML5]</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Databases (Prompt requires Databases category - Resume does not list databases, so placeholder is provided) -->
+          <div class="skill-category-card reveal">
+            <h3 class="skill-category-title">
+              <span class="skill-category-num">04</span>
+              Databases
+            </h3>
+            <div class="tags-container">
+              <!-- 
+                TODO: Add databases you work with (e.g. PostgreSQL, SQLite, MySQL, MongoDB).
+                Currently marked with a placeholder to uphold resume truthfulness.
+              -->
+              <span class="skill-tag skill-tag-placeholder" title="Add databases in index.html">[TODO: Databases - e.g. PostgreSQL, MySQL, SQLite]</span>
+            </div>
+          </div>
+
+          <!-- Category 5: Tools & Platforms -->
+          <div class="skill-category-card reveal">
+            <h3 class="skill-category-title">
+              <span class="skill-category-num">05</span>
+              Tools &amp; Platforms
+            </h3>
+            <div class="tags-container">
+              <span class="skill-tag">Git &amp; GitHub</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Power BI</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Jupyter Notebook</span>
+              <span class="skill-tag">Google Colab</span>
+              <span class="skill-tag">Excel (Pivot Tables, VLOOKUP, Charts)</span>
+            </div>
+          </div>
+
+          <!-- Category 6: Concepts & Core Foundations -->
+          <div class="skill-category-card reveal">
+            <h3 class="skill-category-title">
+              <span class="skill-category-num">06</span>
+              Core Concepts &amp; Soft Skills
+            </h3>
+            <div class="tags-container">
+              <span class="skill-tag">Data Structures &amp; Algorithms</span>
+              <span class="skill-tag">Object-Oriented Programming (OOP)</span>
+              <span class="skill-tag">Problem Solving</span>
+              <span class="skill-tag">Analytical Thinking</span>
+              <span class="skill-tag">Team Collaboration</span>
+              <span class="skill-tag">Fast Learner</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. EDUCATION SECTION ==================== -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">05 / Academics</span>
+          <h2 class="section-title">Education</h2>
+        </div>
+
+        <div class="education-card reveal">
+          <div class="education-header">
+            <div>
+              <h3 class="education-degree">B.Tech – Computer Science (AI &amp; ML)</h3>
+              <h4 class="education-institution">Noida International University, Greater Noida, UP</h4>
+            </div>
+            <div class="education-period">
+              <span class="edu-badge">2023 – 2027</span>
+            </div>
+          </div>
+
+          <div class="education-body">
+            <div class="edu-stat">
+              <span class="stat-number">7.85</span>
+              <span class="stat-label">Cumulative GPA (CGPA)</span>
+            </div>
+            <p class="edu-description">
+              Core academic focus centered on Artificial Intelligence, Machine Learning fundamentals, Advanced Data Structures &amp; Algorithms, and Object-Oriented Software Architecture.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. CONTACT SECTION ==================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div class="contact-header">
+            <span class="section-tag">06 / Connect</span>
+            <h2 class="contact-headline">Let's talk.</h2>
+            <p class="contact-subhead">
+              I am open to machine learning engineering, data analytics, and AI internship opportunities. Whether you have a project idea, a question, or a role to discuss, feel free to get in touch.
+            </p>
+          </div>
+
+          <div class="contact-channels">
+            <!-- Email -->
+            <a href="mailto:aarushv225@gmail.com?subject=Inquiry%20from%20Portfolio" class="contact-channel-item" aria-label="Send email to aarushv225@gmail.com">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="channel-info">
+                <span class="channel-label">Direct Email</span>
+                <span class="channel-value">aarushv225@gmail.com</span>
+              </div>
+              <span class="channel-arrow" aria-hidden="true">→</span>
+            </a>
+
+            <!-- Phone -->
+            <a href="tel:+919105856294" class="contact-channel-item" aria-label="Call +91 9105856294">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="channel-info">
+                <span class="channel-label">Phone</span>
+                <span class="channel-value">+91-9105856294</span>
+              </div>
+              <span class="channel-arrow" aria-hidden="true">→</span>
+            </a>
+
+            <!-- LinkedIn Profile -->
+            <!-- 
+              TODO: Replace the TODO link with your actual LinkedIn profile URL.
+              Example: href="https://www.linkedin.com/in/aarush-verma"
+            -->
+            <a href="https://www.linkedin.com/in/TODO_LINKEDIN_PROFILE" class="contact-channel-item" target="_blank" rel="noopener noreferrer" aria-label="Visit Aarush Verma's LinkedIn Profile">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </div>
+              <div class="channel-info">
+                <span class="channel-label">LinkedIn</span>
+                <span class="channel-value">linkedin.com/in/[TODO]</span>
+              </div>
+              <span class="channel-arrow" aria-hidden="true">→</span>
+            </a>
+
+            <!-- GitHub Profile -->
+            <a href="https://github.com/Aarushverma01" class="contact-channel-item" target="_blank" rel="noopener noreferrer" aria-label="Visit Aarush Verma's GitHub Profile">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </div>
+              <div class="channel-info">
+                <span class="channel-label">GitHub</span>
+                <span class="channel-value">github.com/Aarushverma01</span>
+              </div>
+              <span class="channel-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="contact-cta">
+            <a href="mailto:aarushv225@gmail.com?subject=Hello%20Aarush%20-%20Opportunity" class="btn btn-primary btn-large">
+              <span>Send Direct Email</span>
+              <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== 8. FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <p class="copyright">&copy; 2026 Aarush Verma. All rights reserved.</p>
+        <p class="footer-subtext">Built with semantic HTML5, CSS Grid, and vanilla JavaScript.</p>
+      </div>
+      <div class="footer-right">
+        <a href="#top" class="back-to-top" id="back-to-top" aria-label="Back to top of page">
+          <span>Back to top</span>
+          <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

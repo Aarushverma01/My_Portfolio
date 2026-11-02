@@ -1,0 +1,10 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor & Antigravity scratch/internal folders
+.vscode/
+.idea/
+.gemini/
+*.log
